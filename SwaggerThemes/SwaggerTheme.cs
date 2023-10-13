@@ -4,10 +4,15 @@ using Microsoft.AspNetCore.Http;
 
 namespace SwaggerThemes;
 
-public static class SwaggerThemes
+public static class SwaggerTheme
 {
     private const string ThemesNamespace = "SwaggerThemes.Themes.";
     private const string VariablesFile = "_variables.css";
+
+    public static void UseSwaggerTheme(this WebApplication app, Theme theme)
+    {
+        UseSwaggerThemes(app, theme.Value);
+    }
     
     public static void UseSwaggerThemes(this WebApplication app, string themeFile)
     {
