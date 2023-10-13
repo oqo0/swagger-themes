@@ -13,7 +13,7 @@
 
     <ItemGroup>
         <EmbeddedResource Include="Themes\_base.css" />
-        <EmbeddedResource Include="Themes\darkTheme.css" />
+        <EmbeddedResource Include="Themes\universal-dark.css" />
     </ItemGroup>
     
 </Project>

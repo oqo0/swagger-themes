@@ -17,8 +17,8 @@
     --put-method-background-color: rgba(252, 161, 48, .1);
     --delete-method-color: rgb(249, 62, 62);
     --delete-method-background-color: rgba(249, 62, 62, .1);
-    --options-method-color: rgb(13, 90, 167);
-    --options-method-background-color: rgba(13, 90, 167, .1);
+    --options-method-color: rgb(25, 123, 220);
+    --options-method-background-color: rgba(25, 123, 220, 0.1);
     --patch-method-color: rgb(80, 227, 194);
     --patch-method-background-color: rgba(80, 227, 194, .1);
 

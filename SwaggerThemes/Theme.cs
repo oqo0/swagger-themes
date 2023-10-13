@@ -9,7 +9,7 @@ public class Theme
 
     public string Value { get; private set; }
 
-    public static Theme Dark => new ("darkTheme.css");
+    public static Theme Dark => new ("universal-dark.css");
 
     public override string ToString()
     {
