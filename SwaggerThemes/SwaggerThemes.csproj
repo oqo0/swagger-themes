@@ -12,8 +12,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <EmbeddedResource Include="Themes\dark.css" />
-        <EmbeddedResource Include="Themes\_variables.css" />
+        <EmbeddedResource Include="Themes\_base.css" />
+        <EmbeddedResource Include="Themes\darkTheme.css" />
     </ItemGroup>
     
 </Project>

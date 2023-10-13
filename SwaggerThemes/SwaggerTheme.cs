@@ -7,7 +7,7 @@ namespace SwaggerThemes;
 public static class SwaggerTheme
 {
     private const string ThemesNamespace = "SwaggerThemes.Themes.";
-    private const string VariablesFile = "_variables.css";
+    private const string BaseStylesFile = "_base.css";
 
     public static void UseSwaggerTheme(this WebApplication app, Theme theme)
     {
@@ -16,20 +16,20 @@ public static class SwaggerTheme
     
     public static void UseSwaggerThemes(this WebApplication app, string themeFile)
     {
-        string varsCssPath = "/themes/" + VariablesFile;
+        string baseCssPath = "/themes/" + BaseStylesFile;
         string themeCssPath = "/themes/" + themeFile;
         
-        string varsCss = GetResourceText(VariablesFile);
+        string varsCss = GetResourceText(BaseStylesFile);
         string themeCss = GetResourceText(themeFile);
         
-        app.MapGet(varsCssPath, () => Results.Content(varsCss, "text/css"))
+        app.MapGet(baseCssPath, () => Results.Content(varsCss, "text/css"))
             .ExcludeFromDescription();
         app.MapGet(themeCssPath, () => Results.Content(themeCss, "text/css"))
             .ExcludeFromDescription();
         
         app.UseSwaggerUI(options =>
         {
-            options.InjectStylesheet(varsCssPath);
+            options.InjectStylesheet(baseCssPath);
             options.InjectStylesheet(themeCssPath);
         });
     }
