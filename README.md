@@ -11,6 +11,7 @@ With NuGet CLI:
 nuget install oqo0.SwaggerThemes
 ```
 Using NuGet Package Manager:
+https://www.nuget.org/packages/oqo0.SwaggerThemes/
 
 ## Usage
 ```csharp
