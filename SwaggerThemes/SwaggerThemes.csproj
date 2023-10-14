@@ -28,6 +28,7 @@
         <EmbeddedResource Include="Themes\dracula.css" />
         <EmbeddedResource Include="Themes\one-dark.css" />
         <EmbeddedResource Include="Themes\x-code-light.css" />
+        <EmbeddedResource Include="Themes\nord-dark.css" />
     </ItemGroup>
     
 </Project>
