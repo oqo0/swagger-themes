@@ -17,11 +17,10 @@ https://www.nuget.org/packages/oqo0.SwaggerThemes/
 ```csharp
 app.UseSwagger();
 app.UseSwaggerTheme(Theme.UniversalDark);
-app.UseSwaggerUI();
 ```
 
 > [!WARNING]  
-> `UseSwaggerTheme()` should be placed prior to `UseSwaggerUI()`.
+> Don't use `UseSwaggerUI()` before `UseSwaggerTheme()` or themes are not going to get installed.
 
 #### Adding custom CSS
 ```csharp
