@@ -10,6 +10,7 @@
         <Description>
             Change Swagger documentation theme easily
         </Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
