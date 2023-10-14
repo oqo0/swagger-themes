@@ -15,6 +15,7 @@
         <EmbeddedResource Include="Themes\_base.css" />
         <EmbeddedResource Include="Themes\universal-dark.css" />
         <EmbeddedResource Include="Themes\monokai.css" />
+        <EmbeddedResource Include="Themes\dracula.css" />
     </ItemGroup>
     
 </Project>
