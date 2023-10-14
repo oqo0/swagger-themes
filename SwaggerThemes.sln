@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerThemes", "SwaggerThe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{414D4CF5-8F1E-43BF-9879-19A80448AF3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{C6B504BC-16C0-41B8-81CF-C9367A918701}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerThemesSample", "SwaggerThemesSample\SwaggerThemesSample.csproj", "{C6B504BC-16C0-41B8-81CF-C9367A918701}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
