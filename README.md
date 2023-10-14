@@ -62,5 +62,21 @@ app.UseSwaggerTheme(Theme.UniversalDark);
 app.UseSwaggerTheme(Theme.XCodeLight);
 ```
 
-> [!NOTE]  
-> Create an issue if you have a suggestion for a theme.
+## Creating your own themes
+
+1. Create theme `.css` in `Themes` directory.
+2. Add a placeholder for filename in `Theme.cs`:
+```csharp
+public static Theme YourTheme => new("your-theme.css");
+```
+3. Add an embedded resource for your `.css` file:
+```xml
+    ...
+    <EmbeddedResource Include="Themes\your-theme.css" />
+</ItemGroup>
+```
+4. Use any other complete theme as a template.
+5. Test your new theme:
+```csharp
+app.UseSwaggerTheme(Theme.YourTheme);
+```
