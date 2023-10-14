@@ -9,15 +9,16 @@ public static class SwaggerTheme
     private const string ThemesNamespace = "SwaggerThemes.Themes.";
     private const string BaseStylesFile = "_base.css";
 
-    public static void UseSwaggerTheme(this WebApplication app, Theme theme)
+    public static void UseSwaggerTheme(this WebApplication app, Theme theme, string? customStyles = null)
     {
-        UseSwaggerThemes(app, theme.Value);
+        UseSwaggerThemes(app, theme.Value, customStyles);
     }
     
-    public static void UseSwaggerThemes(this WebApplication app, string themeFile)
+    public static void UseSwaggerThemes(this WebApplication app, string themeFile, string? customStyles = null)
     {
         string baseCssPath = "/themes/" + BaseStylesFile;
         string themeCssPath = "/themes/" + themeFile;
+        string customCssPath = "/themes/custom.css";
         
         string varsCss = GetResourceText(BaseStylesFile);
         string themeCss = GetResourceText(themeFile);
@@ -26,11 +27,22 @@ public static class SwaggerTheme
             .ExcludeFromDescription();
         app.MapGet(themeCssPath, () => Results.Content(themeCss, "text/css"))
             .ExcludeFromDescription();
+
+        if (customStyles is not null)
+        {
+            app.MapGet(customCssPath, () => Results.Content(customStyles, "text/css"))
+                .ExcludeFromDescription();
+        }
         
         app.UseSwaggerUI(options =>
         {
             options.InjectStylesheet(baseCssPath);
             options.InjectStylesheet(themeCssPath);
+
+            if (customStyles is not null)
+            {
+                options.InjectStylesheet(customCssPath);
+            }
         });
     }
 
