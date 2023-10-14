@@ -9,7 +9,7 @@ public static class SwaggerTheme
     private const string ThemesNamespace = "SwaggerThemes.Themes.";
     private const string BaseStylesFile = "_base.css";
 
-    public static void UseSwaggerTheme(this WebApplication app, Theme theme, string? customStyles = null)
+    public static void UseSwaggerThemes(this WebApplication app, Theme theme, string? customStyles = null)
     {
         UseSwaggerThemes(app, theme.Value, customStyles);
     }
