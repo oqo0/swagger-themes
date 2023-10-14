@@ -20,19 +20,14 @@ public static class SwaggerTheme
         string themeCssPath = "/themes/" + themeFile;
         string customCssPath = "/themes/custom.css";
         
-        string varsCss = GetResourceText(BaseStylesFile);
+        string baseCss = GetResourceText(BaseStylesFile);
         string themeCss = GetResourceText(themeFile);
         
-        app.MapGet(baseCssPath, () => Results.Content(varsCss, "text/css"))
-            .ExcludeFromDescription();
-        app.MapGet(themeCssPath, () => Results.Content(themeCss, "text/css"))
-            .ExcludeFromDescription();
-
+        AddGetEndpoint(app, baseCssPath, baseCss);
+        AddGetEndpoint(app, themeCssPath, themeCss);
+        
         if (customStyles is not null)
-        {
-            app.MapGet(customCssPath, () => Results.Content(customStyles, "text/css"))
-                .ExcludeFromDescription();
-        }
+            AddGetEndpoint(app, customCssPath, customStyles);
         
         app.UseSwaggerUI(options =>
         {
@@ -40,12 +35,22 @@ public static class SwaggerTheme
             options.InjectStylesheet(themeCssPath);
 
             if (customStyles is not null)
-            {
                 options.InjectStylesheet(customCssPath);
-            }
         });
     }
 
+    private static void AddGetEndpoint(WebApplication app, string cssPath, string styleText)
+    {
+        app.MapGet(cssPath, (HttpContext context) =>
+            {
+                context.Response.Headers["Cache-Control"] = "public, max-age=3600";
+                context.Response.Headers["Expires"] = DateTime.UtcNow.AddDays(2).ToString("R");
+                
+                return Results.Content(styleText, "text/css");
+            })
+            .ExcludeFromDescription();
+    }
+    
     private static string GetResourceText(string fileName)
     {
         var currentAssembly = Assembly.GetExecutingAssembly();
