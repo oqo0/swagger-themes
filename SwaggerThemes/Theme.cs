@@ -14,6 +14,8 @@ public class Theme
     public static Theme Monokai => new("monokai.css");
     
     public static Theme Dracula => new("dracula.css");
+    
+    public static Theme OneDark => new("one-dark.css");
 
     public override string ToString()
     {

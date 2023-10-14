@@ -1,0 +1,46 @@
+/* https://github.com/oqo0/swagger-dark-theme */
+
+:root {
+    /* primary colors */
+    --swagger-color: #62a03f;
+    --link-color: #2e82e5;
+    --accept-header-color: #47b750;
+
+    /* methods colors */
+    --post-method-color: rgb(141, 199, 111);
+    --post-method-background-color: rgba(141, 199, 111, .08);
+    --get-method-color: rgb(74, 176, 244);
+    --get-method-background-color: rgba(74, 176, 244, .08);
+    --head-method-color: rgb(217, 115, 234);
+    --head-method-background-color: rgba(217, 115, 234, .08);
+    --put-method-color: rgb(189, 135, 86);
+    --put-method-background-color: rgba(189, 135, 86, .08);
+    --delete-method-color: rgb(237, 99, 113);
+    --delete-method-background-color: rgba(237, 99, 113, .08);
+    --options-method-color: rgb(210, 175, 60);
+    --options-method-background-color: rgba(210, 175, 60, .08);
+    --patch-method-color: rgb(113, 128, 147);
+    --patch-method-background-color: rgba(113, 128, 147, .08);
+
+    /* background */
+    --all-bg-color: #272C35;
+    --secondary-bg-color: #272C35;
+    --header-bg-color: #313845;
+    --block-bg-color: #20252C;
+    --selecter-bg-color: #313845;
+
+    /* text */
+    --primary-text-color: rgb(179, 187, 201);
+    --secondary-text-color: rgba(177, 203, 255, 0.3);
+
+    /* border */
+    --block-border-color: rgba(220, 220, 255, 0.1);
+    --block-border-radius: 6px;
+    --innner-block-border-radius: 2px;
+
+    /* icons */
+    --primary-icon-color: rgb(179, 187, 201);
+    --icons-opacity: .28;
+    --secondary-icon-opacity: .5;
+    --black-icons-filter: invert(1);
+}
