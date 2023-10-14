@@ -62,6 +62,11 @@ app.UseSwaggerTheme(Theme.UniversalDark);
 app.UseSwaggerTheme(Theme.XCodeLight);
 ```
 
+#### Nord Dark
+```csharp
+app.UseSwaggerTheme(Theme.NordDark);
+```
+
 ## Creating your own themes
 
 1. Create theme `.css` in `Themes` directory.
