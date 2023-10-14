@@ -14,6 +14,7 @@
     <ItemGroup>
         <EmbeddedResource Include="Themes\_base.css" />
         <EmbeddedResource Include="Themes\universal-dark.css" />
+        <EmbeddedResource Include="Themes\monokai.css" />
     </ItemGroup>
     
 </Project>

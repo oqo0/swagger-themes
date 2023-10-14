@@ -11,6 +11,10 @@ public class Theme
 
     public static Theme UniversalDark => new ("universal-dark.css");
 
+    public static Theme Monokai => new("monokai.css");
+    
+    public static Theme Dracula => new("dracula.css");
+
     public override string ToString()
     {
         return Value;
