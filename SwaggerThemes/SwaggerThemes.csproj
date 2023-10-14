@@ -1,6 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <PackageId>oqo0.SwaggerThemes</PackageId>
+        <Version>1.1</Version>
+        <Authors>oqo0</Authors>
+        <RepositoryUrl>https://github.com/oqo0/swagger-themes</RepositoryUrl>
+        <WebPage>https://github.com/oqo0/swagger-themes</WebPage>
+        <PackageTags>Swagger;Theme;Ui;</PackageTags>
+        <Description>
+            Change Swagger documentation theme easily
+        </Description>
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
