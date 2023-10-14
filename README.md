@@ -3,7 +3,7 @@
 [![github issues](https://img.shields.io/github/issues/oqo0/swagger-themes?&color=E0AF18)]()
 [![github last commits](https://img.shields.io/github/last-commit/oqo0/swagger-themes)]()
 
-Change swagger documentation theme.
+Change Swagger documentation theme easily.
 
 ## Install
 With NuGet CLI:
@@ -63,4 +63,4 @@ app.UseSwaggerTheme(Theme.XCodeLight);
 ```
 
 > [!NOTE]  
-> `Create an issue if you have a suggestion for a theme`.
+> Create an issue if you have a suggestion for a theme.
