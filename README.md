@@ -20,7 +20,7 @@ app.UseSwaggerThemes(Theme.UniversalDark);
 ```
 
 > [!WARNING]  
-> Don't use `UseSwaggerUI()` before `UseSwaggerTheme()` or themes are not going to get installed.
+> Don't use `UseSwaggerUI()` before `UseSwaggerThemes()` or themes are not going to get installed.
 
 #### Adding custom CSS
 ```csharp
@@ -28,43 +28,43 @@ string customCss = "body {" +
                    "    background-color: red;" +
                    "}";
 
-app.UseSwaggerTheme(Theme.UniversalDark, customCss );
+app.UseSwaggerThemes(Theme.UniversalDark, customCss );
 ```
 
 ## Themes
 #### Dracula
 ![alt text](assets/dracula.png)
 ```csharp
-app.UseSwaggerTheme(Theme.Dracula);
+app.UseSwaggerThemes(Theme.Dracula);
 ```
 
 #### Monokai
 ![alt text](assets/monokai.png)
 ```csharp
-app.UseSwaggerTheme(Theme.Monokai);
+app.UseSwaggerThemes(Theme.Monokai);
 ```
 
 #### One Dark
 ![alt text](assets/one-dark.png)
 ```csharp
-app.UseSwaggerTheme(Theme.OneDark);
+app.UseSwaggerThemes(Theme.OneDark);
 ```
 
 #### Universal Dark
 ![alt text](assets/universal-dark.png)
 ```csharp
-app.UseSwaggerTheme(Theme.UniversalDark);
+app.UseSwaggerThemes(Theme.UniversalDark);
 ```
 
 #### X-Code Light
 ![alt text](assets/x-code-light.png)
 ```csharp
-app.UseSwaggerTheme(Theme.XCodeLight);
+app.UseSwaggerThemes(Theme.XCodeLight);
 ```
 
 #### Nord Dark
 ```csharp
-app.UseSwaggerTheme(Theme.NordDark);
+app.UseSwaggerThemes(Theme.NordDark);
 ```
 
 ## Creating your own themes
@@ -83,5 +83,5 @@ public static Theme YourTheme => new("your-theme.css");
 4. Use any other complete theme as a template.
 5. Test your new theme:
 ```csharp
-app.UseSwaggerTheme(Theme.YourTheme);
+app.UseSwaggerThemes(Theme.YourTheme);
 ```
