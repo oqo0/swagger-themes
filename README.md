@@ -16,7 +16,7 @@ https://www.nuget.org/packages/oqo0.SwaggerThemes/
 ## Usage
 ```csharp
 app.UseSwagger();
-app.UseSwaggerTheme(Theme.UniversalDark);
+app.UseSwaggerThemes(Theme.UniversalDark);
 ```
 
 > [!WARNING]  
