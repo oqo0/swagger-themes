@@ -38,10 +38,22 @@ app.UseSwaggerThemes(Theme.UniversalDark, customCss );
 app.UseSwaggerThemes(Theme.Dracula);
 ```
 
+#### Gruvbox
+![alt text](assets/gruvbox.png)
+```csharp
+app.UseSwaggerThemes(Theme.Gruvbox);
+```
+
 #### Monokai
 ![alt text](assets/monokai.png)
 ```csharp
 app.UseSwaggerThemes(Theme.Monokai);
+```
+
+#### Nord Dark
+![alt text](assets/nord-dark.png)
+```csharp
+app.UseSwaggerThemes(Theme.NordDark);
 ```
 
 #### One Dark
@@ -60,11 +72,6 @@ app.UseSwaggerThemes(Theme.UniversalDark);
 ![alt text](assets/x-code-light.png)
 ```csharp
 app.UseSwaggerThemes(Theme.XCodeLight);
-```
-
-#### Nord Dark
-```csharp
-app.UseSwaggerThemes(Theme.NordDark);
 ```
 
 ## Creating your own themes
