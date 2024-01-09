@@ -42,13 +42,13 @@ public static class SwaggerTheme
     private static void AddGetEndpoint(WebApplication app, string cssPath, string styleText)
     {
         app.MapGet(cssPath, (HttpContext context) =>
-            {
-                context.Response.Headers["Cache-Control"] = "public, max-age=3600";
-                context.Response.Headers["Expires"] = DateTime.UtcNow.AddDays(2).ToString("R");
-                
-                return Results.Content(styleText, "text/css");
-            })
-            .ExcludeFromDescription();
+        {
+            context.Response.Headers["Cache-Control"] = "public, max-age=3600";
+            context.Response.Headers["Expires"] = DateTime.UtcNow.AddDays(2).ToString("R");
+            
+            return Results.Content(styleText, "text/css");
+        })
+        .ExcludeFromDescription();
     }
     
     private static string GetResourceText(string fileName)
