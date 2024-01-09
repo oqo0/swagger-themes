@@ -81,7 +81,7 @@ public static Theme YourTheme => new("your-theme.css");
 </ItemGroup>
 ```
 4. Use any other complete theme as a template.
-5. Test your new theme:
-```csharp
-app.UseSwaggerThemes(Theme.YourTheme);
+5. Build project:  
+```
+dotnet build --configuration Release
 ```
