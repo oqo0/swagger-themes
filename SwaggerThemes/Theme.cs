@@ -21,6 +21,8 @@ public class Theme
     
     public static Theme NordDark => new ("nord-dark.css");
 
+    public static Theme Gruvbox => new ("gruvbox.css");
+
     public override string ToString()
     {
         return Value;
