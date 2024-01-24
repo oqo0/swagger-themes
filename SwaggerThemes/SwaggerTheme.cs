@@ -9,14 +9,13 @@ public static class SwaggerTheme
 {
     private const string ThemesNamespace = "SwaggerThemes.Themes.";
     private const string BaseStylesFile = "_base.css";
-    private const string ResourceThemesPath = "/themes/";
 
     public static string GetSwaggerThemeCss(Theme theme)
     {
         var sb = new StringBuilder();
 
-        string baseCss = GetEmbeddedResourceText(ResourceThemesPath + BaseStylesFile);
-        string themeCss = GetEmbeddedResourceText(ResourceThemesPath + theme.FileName);
+        string baseCss = GetEmbeddedResourceText(BaseStylesFile);
+        string themeCss = GetEmbeddedResourceText(theme.FileName);
 
         sb.Append(baseCss);
         sb.Append('\n');
@@ -27,9 +26,9 @@ public static class SwaggerTheme
 
     public static void UseSwaggerThemes(this WebApplication app, Theme theme, string? customStyles = null)
     {
-        string baseCssPath = ResourceThemesPath + BaseStylesFile;
-        string themeCssPath = ResourceThemesPath + theme.FileName;
-        string customCssPath = ResourceThemesPath + "custom.css";
+        string baseCssPath = "/themes/" + BaseStylesFile;
+        string themeCssPath = "/themes/" + theme.FileName;
+        string customCssPath = "/themes/" + "custom.css";
         
         string baseCss = GetEmbeddedResourceText(BaseStylesFile);
         string themeCss = GetEmbeddedResourceText(theme.FileName);
