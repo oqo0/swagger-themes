@@ -2,12 +2,12 @@ namespace SwaggerThemes;
 
 public class Theme
 {
-    private Theme(string value)
+    private Theme(string fileName)
     {
-        Value = value;
+        FileName = fileName;
     }
 
-    public string Value { get; private set; }
+    public string FileName { get; private set; }
 
     public static Theme Dracula => new ("dracula.css");
     
@@ -25,6 +25,6 @@ public class Theme
 
     public override string ToString()
     {
-        return Value;
+        return FileName;
     }
 }

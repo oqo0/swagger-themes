@@ -11,7 +11,7 @@ public static class SwaggerTheme
 
     public static void UseSwaggerThemes(this WebApplication app, Theme theme, string? customStyles = null)
     {
-        UseSwaggerThemes(app, theme.Value, customStyles);
+        UseSwaggerThemes(app, theme.FileName, customStyles);
     }
     
     public static void UseSwaggerThemes(this WebApplication app, string themeFile, string? customStyles = null)
