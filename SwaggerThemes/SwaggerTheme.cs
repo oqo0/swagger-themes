@@ -10,6 +10,10 @@ public static class SwaggerTheme
     private const string ThemesNamespace = "SwaggerThemes.Themes.";
     private const string BaseStylesFile = "_base.css";
 
+    /// <summary>
+    /// Returns a CSS string for a specified Swagger theme.
+    /// </summary>
+    /// <param name="theme">The theme to be applied.</param>
     public static string GetSwaggerThemeCss(Theme theme)
     {
         var sb = new StringBuilder();
@@ -24,6 +28,12 @@ public static class SwaggerTheme
         return sb.ToString();
     }
 
+    /// <summary>
+    /// Configures the Swagger UI with custom themes.
+    /// </summary>
+    /// <param name="app">The web application to which the Swagger UI is added.</param>
+    /// <param name="theme">The theme to be applied to the Swagger UI.</param>
+    /// <param name="customStyles">Optional custom styles to be applied to the Swagger UI.</param>
     public static void UseSwaggerThemes(this WebApplication app, Theme theme, string? customStyles = null)
     {
         string baseCssPath = "/themes/" + BaseStylesFile;
