@@ -11,17 +11,12 @@ public static class SwaggerTheme
 
     public static void UseSwaggerThemes(this WebApplication app, Theme theme, string? customStyles = null)
     {
-        UseSwaggerThemes(app, theme.FileName, customStyles);
-    }
-    
-    public static void UseSwaggerThemes(this WebApplication app, string themeFile, string? customStyles = null)
-    {
         string baseCssPath = "/themes/" + BaseStylesFile;
-        string themeCssPath = "/themes/" + themeFile;
+        string themeCssPath = "/themes/" + theme.FileName;
         string customCssPath = "/themes/custom.css";
         
         string baseCss = GetResourceText(BaseStylesFile);
-        string themeCss = GetResourceText(themeFile);
+        string themeCss = GetResourceText(theme.FileName);
         
         AddGetEndpoint(app, baseCssPath, baseCss);
         AddGetEndpoint(app, themeCssPath, themeCss);
