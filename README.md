@@ -14,13 +14,25 @@ Using NuGet Package Manager:
 https://www.nuget.org/packages/oqo0.SwaggerThemes/
 
 ## Usage
+Select any theme from [themes list](#themes) and apply it using following ways:
+#### Using with Swashbuckle
 ```csharp
 app.UseSwagger();
 app.UseSwaggerThemes(Theme.UniversalDark);
+app.UseSwaggerUI();
 ```
 
-> [!WARNING]  
+> [!IMPORTANT] 
 > Don't use `UseSwaggerUI()` before `UseSwaggerThemes()` or themes are not going to get installed.
+
+#### Using with NSwag
+```csharp
+app.UseOpenApi();
+app.UseSwaggerUi(options =>
+{
+    options.CustomInlineStyles = SwaggerTheme.GetSwaggerThemeCss(Theme.UniversalDarkx);
+});
+```
 
 #### Adding custom CSS
 ```csharp
@@ -35,43 +47,43 @@ app.UseSwaggerThemes(Theme.UniversalDark, customCss );
 #### Dracula
 ![alt text](assets/dracula.png)
 ```csharp
-app.UseSwaggerThemes(Theme.Dracula);
+Theme.Dracula
 ```
 
 #### Gruvbox
 ![alt text](assets/gruvbox.png)
 ```csharp
-app.UseSwaggerThemes(Theme.Gruvbox);
+Theme.Gruvbox
 ```
 
 #### Monokai
 ![alt text](assets/monokai.png)
 ```csharp
-app.UseSwaggerThemes(Theme.Monokai);
+Theme.Monokai
 ```
 
 #### Nord Dark
 ![alt text](assets/nord-dark.png)
 ```csharp
-app.UseSwaggerThemes(Theme.NordDark);
+Theme.NordDark
 ```
 
 #### One Dark
 ![alt text](assets/one-dark.png)
 ```csharp
-app.UseSwaggerThemes(Theme.OneDark);
+Theme.OneDark
 ```
 
 #### Universal Dark
 ![alt text](assets/universal-dark.png)
 ```csharp
-app.UseSwaggerThemes(Theme.UniversalDark);
+Theme.UniversalDark
 ```
 
 #### X-Code Light
 ![alt text](assets/x-code-light.png)
 ```csharp
-app.UseSwaggerThemes(Theme.XCodeLight);
+Theme.XCodeLight
 ```
 
 ## Creating your own themes
