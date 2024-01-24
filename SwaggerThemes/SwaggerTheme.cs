@@ -1,4 +1,5 @@
 using System.Reflection;
+using System.Text;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 
@@ -8,15 +9,30 @@ public static class SwaggerTheme
 {
     private const string ThemesNamespace = "SwaggerThemes.Themes.";
     private const string BaseStylesFile = "_base.css";
+    private const string ResourceThemesPath = "/themes/";
+
+    public static string GetSwaggerThemeCss(Theme theme)
+    {
+        var sb = new StringBuilder();
+
+        string baseCss = GetEmbeddedResourceText(ResourceThemesPath + BaseStylesFile);
+        string themeCss = GetEmbeddedResourceText(ResourceThemesPath + theme.FileName);
+
+        sb.Append(baseCss);
+        sb.Append('\n');
+        sb.Append(themeCss);
+        
+        return sb.ToString();
+    }
 
     public static void UseSwaggerThemes(this WebApplication app, Theme theme, string? customStyles = null)
     {
-        string baseCssPath = "/themes/" + BaseStylesFile;
-        string themeCssPath = "/themes/" + theme.FileName;
-        string customCssPath = "/themes/custom.css";
+        string baseCssPath = ResourceThemesPath + BaseStylesFile;
+        string themeCssPath = ResourceThemesPath + theme.FileName;
+        string customCssPath = ResourceThemesPath + "custom.css";
         
-        string baseCss = GetResourceText(BaseStylesFile);
-        string themeCss = GetResourceText(theme.FileName);
+        string baseCss = GetEmbeddedResourceText(BaseStylesFile);
+        string themeCss = GetEmbeddedResourceText(theme.FileName);
         
         AddGetEndpoint(app, baseCssPath, baseCss);
         AddGetEndpoint(app, themeCssPath, themeCss);
@@ -46,16 +62,16 @@ public static class SwaggerTheme
         .ExcludeFromDescription();
     }
     
-    private static string GetResourceText(string fileName)
+    private static string GetEmbeddedResourceText(string embeddedResourcePath)
     {
         var currentAssembly = Assembly.GetExecutingAssembly();
-        var resource = string.Concat(ThemesNamespace, fileName);
+        var resource = string.Concat(ThemesNamespace, embeddedResourcePath);
 
         using var stream = currentAssembly.GetManifestResourceStream(resource);
         
         if (stream is null)
         {
-            throw new NullReferenceException("Can't find theme resource.");
+            throw new ArgumentException($"Can't find embedded resource: {embeddedResourcePath}");
         }
 
         using var reader = new StreamReader(stream);
