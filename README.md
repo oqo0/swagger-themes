@@ -33,7 +33,7 @@ app.UseSwaggerUI();
 app.UseOpenApi();
 app.UseSwaggerUi(options =>
 {
-    options.CustomInlineStyles = SwaggerTheme.GetSwaggerThemeCss(Theme.UniversalDarkx);
+    options.CustomInlineStyles = SwaggerTheme.GetSwaggerThemeCss(Theme.UniversalDark);
 });
 ```
 
