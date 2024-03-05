@@ -1,7 +1,7 @@
-<p align="left">
-    <img width="10%" src="SwaggerThemes/package-logo.png">
-    <h1>Swagger themes</h1>
-</p>
+<h1>
+    <img height="32" src="SwaggerThemes/package-logo.png" alt="Logo">
+    Swagger themes
+</h1>
 
 [![github issues](https://img.shields.io/github/issues/oqo0/swagger-themes?&color=E0AF18)]()
 [![github last commits](https://img.shields.io/github/last-commit/oqo0/swagger-themes)]()
