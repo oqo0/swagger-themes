@@ -15,10 +15,12 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageIcon>package-logo.png</PackageIcon>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+        <None Include="package-logo.png" Pack="true" PackagePath=""/>
     </ItemGroup>
 
     <ItemGroup>
