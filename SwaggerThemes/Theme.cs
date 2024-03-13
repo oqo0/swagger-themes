@@ -22,6 +22,8 @@ public class Theme
     public static Theme UniversalDark => new ("universal-dark.css");
     
     public static Theme XCodeLight => new ("x-code-light.css");
+    
+    public static Theme Sepia => new ("sepia.css");
 
     public override string ToString()
     {

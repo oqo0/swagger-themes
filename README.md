@@ -140,7 +140,17 @@ Theme.XCodeLight
 ```
 
 </td>
+<td>
 
+<h3>Sepia</h3>
+
+![alt text](assets/sepia.png)
+
+```csharp
+Theme.Sepia
+```
+
+</td>
 </tr>
 
 </table>
