@@ -17,7 +17,7 @@ Using NuGet Package Manager:
 https://www.nuget.org/packages/oqo0.SwaggerThemes/
 
 ## 📚 Usage
-Select any theme from [themes list](#themes) and apply it using following ways:
+Select any theme from [themes list](#-themes) and apply it using following ways:
 #### 📖 Using with Swashbuckle
 ```csharp
 app.UseSwagger();
