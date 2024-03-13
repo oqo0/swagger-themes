@@ -171,5 +171,6 @@ public static Theme YourTheme => new("your-theme.css");
 4. Use any other complete theme as a template.
 5. Build project:  
 ```
-dotnet build --configuration Release
+dotnet build -c Release
 ```
+6. Package `.nupkg` file is going to appear in `./bin/Release`
