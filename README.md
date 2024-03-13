@@ -8,7 +8,7 @@
 
 Change Swagger documentation theme easily.
 
-## Install
+## 💾 Install
 With NuGet CLI:
 ```
 nuget install oqo0.SwaggerThemes
@@ -16,9 +16,9 @@ nuget install oqo0.SwaggerThemes
 Using NuGet Package Manager:
 https://www.nuget.org/packages/oqo0.SwaggerThemes/
 
-## Usage
+## 📚 Usage
 Select any theme from [themes list](#themes) and apply it using following ways:
-#### Using with Swashbuckle
+#### 📖 Using with Swashbuckle
 ```csharp
 app.UseSwagger();
 app.UseSwaggerThemes(Theme.UniversalDark);
@@ -28,7 +28,7 @@ app.UseSwaggerUI();
 > [!IMPORTANT] 
 > Don't use `UseSwaggerUI()` before `UseSwaggerThemes()` or themes are not going to get installed.
 
-#### Using with NSwag
+#### 📖 Using with NSwag
 ```csharp
 app.UseOpenApi();
 app.UseSwaggerUi(options =>
@@ -37,7 +37,7 @@ app.UseSwaggerUi(options =>
 });
 ```
 
-#### Adding custom CSS
+#### 🔧 Adding custom CSS
 ```csharp
 string customCss = "body {" +
                    "    background-color: red;" +
@@ -46,50 +46,92 @@ string customCss = "body {" +
 app.UseSwaggerThemes(Theme.UniversalDark, customCss );
 ```
 
-## Themes
-#### Dracula
+## 🎨 Themes
+
+<table>
+
+<tr>
+<td>
+
+<h3>Dracula</h3>
 ![alt text](assets/dracula.png)
 ```csharp
 Theme.Dracula
 ```
 
-#### Gruvbox
+</td>
+
+<td>
+
+<h3>Gruvbox</h3>
 ![alt text](assets/gruvbox.png)
 ```csharp
 Theme.Gruvbox
 ```
 
-#### Monokai
+</td>
+</tr>
+
+<tr>
+<td>
+
+<h3>Monokai</h3>
 ![alt text](assets/monokai.png)
 ```csharp
 Theme.Monokai
 ```
 
-#### Nord Dark
+</td>
+
+<td>
+
+<h3>Nord Dark</h3>
 ![alt text](assets/nord-dark.png)
 ```csharp
 Theme.NordDark
 ```
 
-#### One Dark
+</td>
+</tr>
+
+<tr>
+<td>
+
+<h3>One Dark</h3>
 ![alt text](assets/one-dark.png)
 ```csharp
 Theme.OneDark
 ```
 
-#### Universal Dark
+</td>
+
+<td>
+
+<h3>Universal Dark</h3>
 ![alt text](assets/universal-dark.png)
 ```csharp
 Theme.UniversalDark
 ```
 
-#### X-Code Light
+</td>
+</tr>
+
+<tr>
+<td>
+
+<h3>X-Code Light</h3>
 ![alt text](assets/x-code-light.png)
 ```csharp
 Theme.XCodeLight
 ```
 
-## Creating your own themes
+</td>
+
+</tr>
+
+</table>
+
+## 💡 Creating your own themes
 
 1. Create theme `.css` in `Themes` directory.
 2. Add a placeholder for filename in `Theme.cs`:
