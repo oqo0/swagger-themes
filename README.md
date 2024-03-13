@@ -54,7 +54,9 @@ app.UseSwaggerThemes(Theme.UniversalDark, customCss );
 <td>
 
 <h3>Dracula</h3>
-![alt text](assets/dracula.png)
+
+![alt text](assets/dracula.png)  
+
 ```csharp
 Theme.Dracula
 ```
@@ -64,7 +66,9 @@ Theme.Dracula
 <td>
 
 <h3>Gruvbox</h3>
-![alt text](assets/gruvbox.png)
+
+![alt text](assets/gruvbox.png)  
+
 ```csharp
 Theme.Gruvbox
 ```
@@ -76,7 +80,9 @@ Theme.Gruvbox
 <td>
 
 <h3>Monokai</h3>
-![alt text](assets/monokai.png)
+
+![alt text](assets/monokai.png)  
+
 ```csharp
 Theme.Monokai
 ```
@@ -86,7 +92,9 @@ Theme.Monokai
 <td>
 
 <h3>Nord Dark</h3>
-![alt text](assets/nord-dark.png)
+
+![alt text](assets/nord-dark.png)  
+
 ```csharp
 Theme.NordDark
 ```
@@ -98,7 +106,9 @@ Theme.NordDark
 <td>
 
 <h3>One Dark</h3>
-![alt text](assets/one-dark.png)
+
+![alt text](assets/one-dark.png)  
+
 ```csharp
 Theme.OneDark
 ```
@@ -108,7 +118,9 @@ Theme.OneDark
 <td>
 
 <h3>Universal Dark</h3>
-![alt text](assets/universal-dark.png)
+
+![alt text](assets/universal-dark.png)  
+
 ```csharp
 Theme.UniversalDark
 ```
@@ -120,7 +132,9 @@ Theme.UniversalDark
 <td>
 
 <h3>X-Code Light</h3>
-![alt text](assets/x-code-light.png)
+
+![alt text](assets/x-code-light.png)  
+
 ```csharp
 Theme.XCodeLight
 ```
