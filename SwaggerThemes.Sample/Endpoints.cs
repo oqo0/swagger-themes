@@ -1,8 +1,8 @@
 ﻿namespace SwaggerThemes.Sample;
 
-public static class Endpoints
+internal static class Endpoints
 {
-    public static WebApplication AddEndpoints(this WebApplication app)
+    internal static WebApplication AddEndpoints(this WebApplication app)
     {
         app.MapGet("/get", () => "Result")
             .WithSampleInfo();
