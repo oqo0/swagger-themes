@@ -345,6 +345,10 @@
         color: var(--primary-text-color);
     }
 
+    .opblock-summary-description {
+        color: var(--secondary-text-color) !important;
+    }
+    
     .swagger-ui table thead tr td, .swagger-ui table thead tr th {
         border-bottom: 1px solid var(--block-border-color);
         color: var(--primary-text-color);
