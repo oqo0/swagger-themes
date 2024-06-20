@@ -33,6 +33,7 @@
         <EmbeddedResource Include="Themes\x-code-light.css" />
         <EmbeddedResource Include="Themes\nord-dark.css" />
         <EmbeddedResource Include="Themes\gruvbox.css" />
+        <EmbeddedResource Include="Themes\vs2022.css" />
     </ItemGroup>
     
 </Project>

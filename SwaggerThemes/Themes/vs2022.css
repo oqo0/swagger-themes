@@ -1,0 +1,39 @@
+:root {
+    /* primary colors */
+    --swagger-color: #007acc;
+    --link-color: #3794ff;
+    --accept-header-color: #6a9955;
+    /* methods colors */
+    --post-method-color: rgb(127, 176, 84);
+    --post-method-background-color: rgba(127, 176, 84, .08);
+    --get-method-color: rgb(58, 150, 221);
+    --get-method-background-color: rgba(58, 150, 221, .08);
+    --head-method-color: rgb(183, 121, 215);
+    --head-method-background-color: rgba(183, 121, 215, .08);
+    --put-method-color: rgb(181, 101, 29);
+    --put-method-background-color: rgba(181, 101, 29, .08);
+    --delete-method-color: rgb(230, 17, 35);
+    --delete-method-background-color: rgba(230, 17, 35, .08);
+    --options-method-color: rgb(193, 156, 0);
+    --options-method-background-color: rgba(193, 156, 0, .08);
+    --patch-method-color: rgb(106, 153, 85);
+    --patch-method-background-color: rgba(106, 153, 85, .08);
+    /* background */
+    --all-bg-color: #1e1e1e;
+    --secondary-bg-color: #1e1e1e;
+    --header-bg-color: #252526;
+    --block-bg-color: #2d2d30;
+    --selecter-bg-color: #3c3c3c;
+    /* text */
+    --primary-text-color: rgb(204, 204, 204);
+    --secondary-text-color: rgba(204, 204, 204, 0.8);
+    /* border */
+    --block-border-color: rgba(128, 128, 128, 0.3);
+    --block-border-radius: 6px;
+    --innner-block-border-radius: 2px;
+    /* icons */
+    --primary-icon-color: rgb(204, 204, 204);
+    --icons-opacity: 0.3;
+    --secondary-icon-opacity: .5;
+    --black-icons-filter: invert(1);
+}
