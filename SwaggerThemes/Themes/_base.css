@@ -327,6 +327,18 @@
         color: var(--secondary-text-color);
     }
 
+    .swagger-ui h3 {
+        color: var(--primary-text-color) !important;
+    }
+    
+    .swagger-ui h4 {
+        color: var(--primary-text-color) !important;
+    }
+
+    .swagger-ui h4 {
+        color: var(--secondary-text-color) !important;
+    }
+    
     .swagger-ui label {
         color: var(--primary-text-color);
     }
