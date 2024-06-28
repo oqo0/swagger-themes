@@ -327,6 +327,10 @@
         color: var(--secondary-text-color);
     }
 
+    .swagger-ui ol {
+        color: var(--primary-text-color);
+    }
+    
     .swagger-ui h3 {
         color: var(--primary-text-color) !important;
     }
