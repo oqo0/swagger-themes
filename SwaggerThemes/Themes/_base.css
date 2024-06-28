@@ -339,7 +339,7 @@
         color: var(--primary-text-color) !important;
     }
 
-    .swagger-ui h4 {
+    .swagger-ui h5 {
         color: var(--secondary-text-color) !important;
     }
     
