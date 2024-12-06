@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <PackageId>oqo0.SwaggerThemes</PackageId>
@@ -11,7 +11,7 @@
             Change Swagger documentation theme easily
         </Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -19,8 +19,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" PrivateAssets="all"/>
-        <None Include="package-logo.png" Pack="true" PackagePath=""/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="7.1.0" PrivateAssets="all" />
+        <None Include="package-logo.png" Pack="true" PackagePath="" />
     </ItemGroup>
 
     <ItemGroup>

@@ -21,12 +21,8 @@ Select any theme from [themes list](#-themes) and apply it using following ways:
 #### 📖 Using with Swashbuckle
 ```csharp
 app.UseSwagger();
-app.UseSwaggerThemes(Theme.UniversalDark);
-app.UseSwaggerUI();
+app.UseSwaggerUI(Theme.UniversalDark);
 ```
-
-> [!IMPORTANT] 
-> Don't use `UseSwaggerUI()` before `UseSwaggerThemes()` or themes are not going to get installed.
 
 #### 📖 Using with NSwag
 ```csharp
@@ -43,7 +39,7 @@ string customCss = "body {" +
                    "    background-color: red;" +
                    "}";
 
-app.UseSwaggerThemes(Theme.UniversalDark, customCss );
+app.UseSwaggerUI(Theme.UniversalDark, customCss );
 ```
 
 ## 🎨 Themes
