@@ -3,7 +3,7 @@
     <PropertyGroup>
         <PackageId>oqo0.SwaggerThemes</PackageId>
         <Version>1.4.0</Version>
-        <Authors>oqo0</Authors>
+        <Authors>oqo0,ds5678</Authors>
         <RepositoryUrl>https://github.com/oqo0/swagger-themes</RepositoryUrl>
         <WebPage>https://github.com/oqo0/swagger-themes</WebPage>
         <PackageTags>Swagger;Theme;Ui;</PackageTags>
