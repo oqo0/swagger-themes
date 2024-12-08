@@ -29,7 +29,7 @@ public static class SwaggerTheme
     /// <param name="theme">The theme to be applied to the Swagger UI.</param>
     /// <param name="customStyles">Optional custom styles to be applied to the Swagger UI.</param>
     /// <param name="setupAction">Additional swagger setup options</param>
-    public static void UseSwaggerUi(
+    public static void UseSwaggerUI(
         this WebApplication app, Theme theme, string? customStyles = null, Action<SwaggerUIOptions>? setupAction = null)
     {
         string baseCssPath = "/themes/" + Theme.Base.FileName;
