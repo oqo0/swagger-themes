@@ -11,7 +11,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(Theme.UniversalDark);
+    app.UseSwaggerUi(Theme.UniversalDark);
 }
 
 app.AddEndpoints();
