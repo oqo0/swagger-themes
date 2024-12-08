@@ -18,6 +18,14 @@
         <PackageIcon>package-logo.png</PackageIcon>
     </PropertyGroup>
 
+    <PropertyGroup Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net6.0'))">
+        <IsTrimmable>true</IsTrimmable>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net8.0'))">
+        <IsAotCompatible>true</IsAotCompatible>
+    </PropertyGroup>
+
     <ItemGroup>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="7.1.0" PrivateAssets="all" />
         <None Include="package-logo.png" Pack="true" PackagePath="" />
