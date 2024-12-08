@@ -56,9 +56,9 @@ public static class SwaggerTheme
     {
         app.MapGet(cssPath, (HttpContext context) =>
         {
-            context.Response.Headers.CacheControl = "public, max-age=3600";
-            context.Response.Headers.Expires = DateTime.UtcNow.AddDays(2).ToString("R");
-            return Results.Content(styleText, "text/css").ExecuteAsync(context);
+            context.Response.Headers["Cache-Control"] = "public, max-age=3600";
+            context.Response.Headers["Expires"] = DateTime.UtcNow.AddDays(2).ToString("R");
+            return Results.Content(styleText, "text/css");
         })
         .ExcludeFromDescription();
     }
