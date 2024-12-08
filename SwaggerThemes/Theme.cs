@@ -40,10 +40,10 @@ public class Theme
 
     private static string GetEmbeddedResourceText(string embeddedResourcePath)
     {
-        const string ThemesNamespace = "SwaggerThemes.Themes.";
+        const string themesNamespace = "SwaggerThemes.Themes.";
 
         var currentAssembly = Assembly.GetExecutingAssembly();
-        var resource = string.Concat(ThemesNamespace, embeddedResourcePath);
+        var resource = string.Concat(themesNamespace, embeddedResourcePath);
 
         using var stream = currentAssembly.GetManifestResourceStream(resource)
             ?? throw new ArgumentException($"Can't find embedded resource: {embeddedResourcePath}");
