@@ -1,3 +1,5 @@
+using System.Reflection;
+
 namespace SwaggerThemes;
 
 public class Theme
@@ -8,6 +10,10 @@ public class Theme
     }
 
     public string FileName { get; private set; }
+
+    internal string Text => GetEmbeddedResourceText(FileName);
+
+    internal static Theme Base => new("_base.css");
 
     public static Theme Dracula => new ("dracula.css");
     
@@ -30,5 +36,20 @@ public class Theme
     public override string ToString()
     {
         return FileName;
+    }
+
+    private static string GetEmbeddedResourceText(string embeddedResourcePath)
+    {
+        const string themesNamespace = "SwaggerThemes.Themes.";
+
+        var currentAssembly = Assembly.GetExecutingAssembly();
+        var resource = string.Concat(themesNamespace, embeddedResourcePath);
+
+        using var stream = currentAssembly.GetManifestResourceStream(resource)
+            ?? throw new ArgumentException($"Can't find embedded resource: {embeddedResourcePath}");
+
+        using var reader = new StreamReader(stream);
+
+        return reader.ReadToEnd();
     }
 }

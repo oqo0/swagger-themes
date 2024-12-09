@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <PackageId>oqo0.SwaggerThemes</PackageId>
-        <Version>1.3.3</Version>
-        <Authors>oqo0</Authors>
+        <Version>1.4.0</Version>
+        <Authors>oqo0,ds5678</Authors>
         <RepositoryUrl>https://github.com/oqo0/swagger-themes</RepositoryUrl>
         <WebPage>https://github.com/oqo0/swagger-themes</WebPage>
         <PackageTags>Swagger;Theme;Ui;</PackageTags>
@@ -11,16 +11,24 @@
             Change Swagger documentation theme easily
         </Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFrameworks>net6.0;net8.0;net9.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageIcon>package-logo.png</PackageIcon>
     </PropertyGroup>
 
+    <PropertyGroup Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net6.0'))">
+        <IsTrimmable>true</IsTrimmable>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net8.0'))">
+        <IsAotCompatible>true</IsAotCompatible>
+    </PropertyGroup>
+
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" PrivateAssets="all"/>
-        <None Include="package-logo.png" Pack="true" PackagePath=""/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="7.1.0" PrivateAssets="all" />
+        <None Include="package-logo.png" Pack="true" PackagePath="" />
     </ItemGroup>
 
     <ItemGroup>
