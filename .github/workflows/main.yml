@@ -5,29 +5,6 @@ on:
     types: [published]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: '9.0.x'
-
-      - name: Restore dependencies
-        working-directory: ./SwaggerThemes
-        run: dotnet restore
-
-      - name: Build the solution
-        working-directory: ./SwaggerThemes
-        run: dotnet build --configuration Release --no-restore
-
-      - name: Run unit tests
-        working-directory: ./SwaggerThemes
-        run: dotnet test --configuration Release --no-build --verbosity normal
 
   publish:
     runs-on: ubuntu-latest
