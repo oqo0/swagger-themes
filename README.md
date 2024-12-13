@@ -3,6 +3,7 @@
     Swagger themes
 </h1>
 
+[![github publish workflow](https://github.com/oqo0/swagger-themes/actions/workflows/main.yml/badge.svg)](https://github.com/oqo0/swagger-themes/actions/workflows/main.yml)
 [![github issues](https://img.shields.io/github/issues/oqo0/swagger-themes?&color=E0AF18)]()
 [![github last commits](https://img.shields.io/github/last-commit/oqo0/swagger-themes)]()
 
