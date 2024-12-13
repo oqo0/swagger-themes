@@ -56,13 +56,12 @@ public static class SwaggerTheme
 
     private static void AddGetEndpoint(WebApplication app, string cssPath, string styleText)
     {
-        // MapGet always returns a RouteHandlerBuilder
-        RouteHandlerBuilder builder = (RouteHandlerBuilder)app.MapGet(cssPath, (HttpContext context) =>
+        app.MapGet(cssPath, (HttpContext context) =>
         {
             context.Response.Headers["Cache-Control"] = "public, max-age=3600";
             context.Response.Headers["Expires"] = DateTime.UtcNow.AddDays(2).ToString("R");
-            return Results.Content(styleText, "text/css").ExecuteAsync(context);
-        });
-        builder.ExcludeFromDescription();
+            return Results.Content(styleText, "text/css");
+        })
+        .ExcludeFromDescription();
     }
 }
