@@ -18,6 +18,10 @@ jobs:
         with:
           dotnet-version: '9.0.x'
 
+      - name: Restore dependencies
+        working-directory: ./SwaggerThemes
+        run: dotnet restore
+
       - name: Build the project
         working-directory: ./SwaggerThemes
         run: dotnet build --configuration Release --no-restore --output './build'
