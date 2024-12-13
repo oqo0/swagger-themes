@@ -22,12 +22,16 @@ jobs:
         working-directory: ./SwaggerThemes
         run: dotnet restore
 
-      - name: Build the project
+      - name: Build the project for all frameworks
         working-directory: ./SwaggerThemes
-        run: dotnet build --configuration Release --no-restore --output './build'
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Pack the project
+        working-directory: ./SwaggerThemes
+        run: dotnet pack --configuration Release --no-build --output './packages'
 
       - name: Publish to NuGet
         working-directory: ./SwaggerThemes
         env:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-        run: dotnet nuget push './build/*.nupkg' --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push './packages/*.nupkg' --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
