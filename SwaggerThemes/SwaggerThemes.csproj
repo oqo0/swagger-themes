@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageId>oqo0.SwaggerThemes</PackageId>
-        <Version>1.4.1</Version>
+        <Version>1.4.2</Version>
         <Authors>oqo0,ds5678</Authors>
         <RepositoryUrl>https://github.com/oqo0/swagger-themes</RepositoryUrl>
         <WebPage>https://github.com/oqo0/swagger-themes</WebPage>
@@ -27,8 +27,23 @@
         <IsAotCompatible>true</IsAotCompatible>
     </PropertyGroup>
 
-    <ItemGroup>
+    <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" PrivateAssets="all" />
+    </ItemGroup>
+    
+    <ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" PrivateAssets="all" />
+    </ItemGroup>
+      
+    <ItemGroup>
         <None Include="package-logo.png" Pack="true" PackagePath="" />
     </ItemGroup>
 
