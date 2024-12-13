@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <PackageId>oqo0.SwaggerThemes</PackageId>
-        <Version>1.4.2</Version>
+        <Version>1.4.3</Version>
         <Authors>oqo0,ds5678</Authors>
         <RepositoryUrl>https://github.com/oqo0/swagger-themes</RepositoryUrl>
         <WebPage>https://github.com/oqo0/swagger-themes</WebPage>
