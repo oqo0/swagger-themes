@@ -1,0 +1,56 @@
+name: Nuget Publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        working-directory: ./SwaggerThemes
+        run: dotnet restore
+
+      - name: Build the solution
+        working-directory: ./SwaggerThemes
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Run unit tests
+        working-directory: ./SwaggerThemes
+        run: dotnet test --configuration Release --no-build --verbosity normal
+
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        working-directory: ./SwaggerThemes
+        run: dotnet restore
+
+      - name: Build the project
+        working-directory: ./SwaggerThemes
+        run: dotnet build --configuration Release --no-restore --output './build'
+
+      - name: Publish to NuGet
+        working-directory: ./SwaggerThemes
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: dotnet nuget push './build/*.nupkg' --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
