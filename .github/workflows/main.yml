@@ -18,9 +18,9 @@ jobs:
         with:
           dotnet-version: '9.0.x'
 
-      - name: Restore dependencies
+      - name: Generate nuget package
         working-directory: ./SwaggerThemes
-        run: dotnet restore
+        run: dotnet pack --configuration Release --output './build'
 
       - name: Publish to NuGet
         working-directory: ./SwaggerThemes
