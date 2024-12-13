@@ -18,9 +18,9 @@ jobs:
         with:
           dotnet-version: '9.0.x'
 
-      - name: Generate nuget package
+      - name: Build the project
         working-directory: ./SwaggerThemes
-        run: dotnet pack --configuration Release --output './build'
+        run: dotnet build --configuration Release --no-restore --output './build'
 
       - name: Publish to NuGet
         working-directory: ./SwaggerThemes
